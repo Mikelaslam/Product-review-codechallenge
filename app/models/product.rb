@@ -6,7 +6,10 @@ class Product < ActiveRecord::Base
   Review.create(user: user, star_rating: star_rating, comment: comment, product: self)
   end
 
-  
-
+  def print_all_reviews
+  Review.where(product: self).each do |review|
+    puts "Review for #{name} by #{review.user.name}: #{review.star_rating}. #{review.comment}"
+  end
+end
 
 end
