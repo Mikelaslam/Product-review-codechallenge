@@ -7,8 +7,10 @@ class User < ActiveRecord::Base
          .where(users: { id: id })
          .order('reviews.star_rating DESC')
          .first
-end
+    end
 
-
+    def remove_reviews(product)
+  reviews.where(product: product).destroy_all
+    end
 
 end
