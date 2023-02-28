@@ -1,8 +1,9 @@
+puts "Seeding..."
 #Product
-Product.create(name: "Automatic cooler", description: "Cools within no time", price: 25,000)
-Product.create(name: "Vending machine", description: "Drop and take ", price: 60,000)
-Product.create(name: "Playstation", description: "Real time experience", price: 65,000)
-Product.create(name: "Rice cooker", description: "Cooks while saving energy", price: 12,000)
+Product.create(name: "Automatic cooler", description: "Cools within no time", price: 25000 )
+Product.create(name: "Vending machine", description: "Drop and take ", price: 60000 )
+Product.create(name: "Playstation", description: "Real time experience", price: 65000 )
+Product.create(name: "Rice cooker", description: "Cooks while saving energy", price: 12000 ) 
 
 #User
 User.create(name: "John Doe")
@@ -20,4 +21,5 @@ Review.create(star_rating: 4, comment: "Cools as fast as expected!", product_id:
 
 Review.create(star_rating: 5, comment: "Enjoyed the games!", product_id: 3, user_id: 3)
 
+puts "Done Seeding"
 
